@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let numero = prompt("Digite um numero")
+
+        document.write('Taboada de adição')
+
+        for(let i = 0;i <= 10; i++){
+            document.write(`${i} + ${numero} = ${(numero + i)}<br>`);
+        }
+        document.write('<br>##############################################<br>')
+        document.write('Taboada de subtração <br>')
+        for(let i = 0;i <= 10; i++){
+            document.write(`${i} - ${numero} = ${(numero - i)}<br>`);
+        }
+        document.write('<br>##############################################<br>')
+        document.write('Taboada de multiplicação <br>')
+        for(let i = 0;i <= 10; i++){
+            document.write(` ${i} x ${numero}   = ${(numero * i)}<br>`);
+        }
+        document.write('<br>##############################################<br>')
+        document.write('Taboada de divisão <br>')
+        for(let i = 0;i <= 10; i++){
+            document.write(`${i} / ${numero} = ${(numero / i)}<br>`);
+        }
+        document.write('<br>##############################################<br>')
+              
+    </script>
+</body>
+</html>
