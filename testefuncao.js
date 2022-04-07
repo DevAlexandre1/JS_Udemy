@@ -65,7 +65,7 @@ function calc(){
 
 }
 
-*/
+
 
 //IMC FUNCIONANDO DENTRO DO CONSOLE
 
@@ -92,7 +92,65 @@ function grau(resultImc){
     }else
         return "Obesidade Grau III"
 }
+)
 
 let IMC = calcIMC(52,1.53)
 console.log(IMC)
 console.log(grau(IMC))
+*/
+
+//IMC FUNCIONANDO DENTRO DO CONSOLE
+
+function calcIMC(peso,altura){
+    let resultImc = peso / (altura**2 )
+
+    if(peso === undefined || altura === undefined){
+        console.log("Por favor informar peso e altura")
+    }else
+        return resultImc
+}
+
+function grau(resultImc){
+    if(resultImc < 18.5){
+        return "Abaixo do peso"
+    }else if(resultImc < 24.9){
+        return "Peso normal"
+    }else if(resultImc < 29.9){        
+        return "Sobre peso"       
+    }else if(resultImc <34.9){
+        return "Obesidade Grau I"
+    }else if(resultImc <36.9){
+        return "Obesidade Grau II"
+    }else
+        return "Obesidade Grau III"
+        
+}
+
+grau(function(){
+    console.log('Passou pela função callback')
+
+})
+
+
+let IMC = calcIMC(52,1.53)
+console.log(IMC)
+console.log(grau(IMC))
+
+
+
+//CallBack
+
+//Ao chamar a função teste vc passa como paramentro outra função e essa função com 3 parâmetros, 
+//sendo assim cb seria a função que esta esta dentro da propriedade da função teste
+// e os 3 valores de cb são atribuidos para ela.
+
+function teste(cb,){
+        console.log("Função teste")
+        cb(10,15,30)
+}
+
+teste(function(n1,n2,n3){
+    let mediaA = (n1 +n2+n3 )/3
+    console.log("Função de Callback")
+    console.log(`Media dos valores são: ${mediaA}`)
+})
