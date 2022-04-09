@@ -1,7 +1,6 @@
 const inpNome = document.getElementById("inpNome")
 const inpEmail = document.getElementById("inpEmail")
 const btnCheck = document.getElementById("inpCheck")
-const contratotxt = document.getElementById("contratoP")
 const btnCadastrar = document.getElementById("btnCadastrar")
 
 
@@ -9,8 +8,7 @@ let nome = inpNome.value
 let email = inpEmail.value
 let checkValor = btnCheck.checked
 
-//let contratoP = contratotxt.value
-
+btnCadastrar.disabled = true
 
 function editar(){
     inpEmail.disabled = false   
@@ -23,23 +21,23 @@ function nomeDisable(){
     inpEmail.focus()
 }
 
-function checkClick(){
-    if(checkValor == true){
+function checkClick(){   
+    let checkValor = btnCheck.checked
+    if(checkValor){
         btnCadastrar.disabled = false
-
     }else{
-        console.log(checkValor)
+        btnCadastrar.disabled = true
     }
 }
 
 
 function cadastrar(){
-if((nome !== null)&& (email !== null) && (check == true)){    
-    contratotxt.innerHTML = "Contrato assianado"
-}else{
-    contratotxt.innerHTML = "Verificar informações: Nome, Email e aceite do contrato"
-}
+    if((nome !== null)&& (email !== null)){    
+        contratoP.innerHTML = "Contrato assianado"
 
+    }else{
+        contratoP.innerHTML = "Verificar informações: Nome, Email e aceite do contrato"
+    }
 }
 
 
