@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#inpNome{
+    margin: 10px;
+    width: 230px;
+}
+#inpEmail{
+   margin-left: 10px;
+   width: 230px;
+}
+#inpCheck{
+    margin-top: 15px; 
+    margin-bottom: 35px;
+}
+#contrato{
+    background-color: rgb(183, 183, 183);
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
