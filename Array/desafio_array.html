@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio array sum and avarege</title>
+
+    <style>
+        #resSoma, #resMedia{
+            margin-top: 10px;
+            width: 400px;
+            height: 100px;
+            background-color: lightgrey;
+            border: 1px solid black;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Desafio array</h1>
+
+    <p>Informe numeros colocando , entre eles</p>
+
+
+    <input type="text" name="textinp" id="inpTxt">
+    <button id="btnSoma" onclick="somaCalc()">Soma</button>
+    <button id="btnMedia" onclick="mediaCalc()">Media</button>
+
+    <div id="resSoma"><p>Soma:</p></div>
+    <div id="resMedia"><p>Media:</p></div>
+
+    <script>
+        const inpDados = document.getElementById("inpTxt")
+        const resSoma = document.getElementById("resSoma")
+        const resMedia = document.getElementById("resMedia")
+        
+        let dados = inpDados.value
+        const arr = new Array(dados)
+        let arr2 = Array.from(arr)
+
+       
+
+       
+
+        function somaCalc(){
+            let soma = arr2.reduce(function(acumulador,atual){
+            return sum(acumulador,atual)
+        })
+            
+            resSoma.innerHTML = `O Resultado da soma dos valores digitados são: ${soma}`
+        
+        }
+
+        function mediaCalc(){
+         
+            resMedia.innerHTML = `O Resultado da média dos valores digitados são:`
+        }
+
+        
+
+    </script>
+</body>
+</html>
