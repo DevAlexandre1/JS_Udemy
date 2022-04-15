@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando elementos no HTML com JS</title>
+</head>
+<body>
+
+
+    <script>
+        //Criou um elemento:
+        const title = document.createElement("h1")
+
+        //Criou um atributo:
+        const atribute = document.createAttribute("id")
+
+        //Definiu um nome para o atributo
+        atribute.value = "title1"
+
+        //Setou um atributo para a variável title, trocando nome do atributo de title1 para titulo2
+        title.setAttribute("id", "titulo2")
+        title.setAttribute("style", "background-color: yellow; width: 400px")
+
+        //Criou um texto e salvou dentro da variável text
+        const text = document.createTextNode("Criando nós no DOM")
+        
+        //Variável title recebe o nó filho text
+        title.appendChild(text) 
+        
+        //Adicionando texto ao h1
+        title.textContent = "Vou vencer"
+
+        //Mostrando o texto no HTML
+        document.body.appendChild(title)
+        
+    </script>
+</body>
+</html>
