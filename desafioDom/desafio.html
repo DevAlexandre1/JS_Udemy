@@ -71,8 +71,7 @@
 
     <script type="text/javascript">
        
-		// crie um nova li com texto "item 2" e a inclua na ul de div com class .alvo
-
+		//crie um nova li com texto "item 2" e a inclua na ul de div com class .alvo
             const novaLi = document.createElement("li")
             const noLi = document.querySelector(".alvo ul")
             novaLi.textContent = "item 2"
@@ -81,35 +80,25 @@
 
 		//Mova a última li de orignal para alvo (mas antes da primeira li). 
         //Em outras palavras, a última li da original deve virar a primeira li de alvo
-        const movLi = document.querySelector(".original ul")
-        const movLi3 = movLi.lastElementChild
-        noLi.before(movLi3)
+            const movLi = document.querySelector(".original ul")        
+            const movLi3 = movLi.lastElementChild
+            noLi.before(movLi3)
        
 		//altere o texto da primeira li de .alvo para "item 0"
-
-        movLi3.textContent = "Item 0"
-
+             movLi3.textContent = "Item 0"
 
 		//clone a ul de .original e a inclua na primeira li de .alvo
-
-
-       
-        let ulElement = document.querySelectorAll("ul")
-        const noLi1 = noLi.firstElementChild
-        ulElement = movLi
-        noLi1.appendChild(ulElement)
-        
-
-    //    document.body.noLi1.appendChild(ulElement)
-       
-       
-        //movLi.cloneNode(True)
-
+            const movLi4 = movLi.cloneNode(true)
+            let ulElement = document.querySelectorAll("ul")       
+            const noLi1 = noLi.firstElementChild
+            ulElement = movLi4
+            noLi1.appendChild(ulElement)
+            
 		//remova a ultima li (item2) da lista inserida na etapa anterior
-
+            movLi4.lastElementChild.remove()
+                
 		//remova as duas li's que sobraram na ul original
-
-
+            movLi.remove()
     </script>
 </body>
 
