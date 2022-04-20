@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gastos.css">
+    <title>Projeto MyMoney</title>
+</head>
+<body>
+    <div class="container">
+        <div class="containerMenu">
+            <h1>MyMoney</h1>            
+            <label for="inpValor" >Digite o valor:</label>
+            <input type="number" name="inpValor" id="inpValor" placeholder="R$0.00">
+            <label for="inpCategoria">Informe a categoria:</label>
+            <select id="inpCategoria">
+                <option value="1">Alimentação</option>
+                <option value="2">Casa</option>
+                <option value="3">Carro</option>
+                <option value="4">Vestiário</option>
+                <option value="5">Beleza</option>
+                <option value="6">Despesa fixas</option>
+                <option value="7">Despesas extras</option>
+                <option value="8">Lazer</option>                
+            </select>
+            <label for="inpObs">Observação:</label>
+            <input type="text" name="inpObs" id="inpObs">
+            <button id="btnAdicionar" type="submit">Adicionar</button>
+            
+        </div>
+    </div>
+    <div id="containerResultado">
+        <div class="resultados">
+            <h3>Gastos</h3>
+            <ul id="ulResultado">
+
+            </ul>
+            
+        </div>
+    </div>
+       
+
+<script src="gastos.js"></script>    
+</body>
+</html>
