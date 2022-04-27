@@ -69,3 +69,20 @@ function formatarNome(nomeCompleto){
 // console.log(formatarNome("Daniel")) //retornar Daniel    
 // console.log(formatarNome("Daniel Moraes")) //retornar Morais, Daniel    
 // console.log(formatarNome("Daniel Tapilas Moraes")) //retornar Tapilas Morales,Daniel    
+
+
+//Mesmo exercicio acima, mas utilizando split e shift
+function formatarNome(nomeCompleto){
+    let nomeArray = nomeCompleto.split(" ")
+    if(nomeArray.length ===1){
+        return nomeCompleto
+    }    
+    
+    let primeiroNome = nomeArray.shift()
+    return nomeArray.join(" ") +" ,"+ primeiroNome
+    
+    
+}
+//  console.log(formatarNome("Daniel")) //retornar Daniel    
+//  console.log(formatarNome("Daniel Moraes")) //retornar Morais, Daniel    
+//  console.log(formatarNome("Daniel Tapilas Moraes")) //retornar Tapilas Morales,Daniel    
