@@ -100,8 +100,8 @@
 					p.textContent = p.innerHTML.substring(0,maxLenght) + "..."
 
 					const btn = document.createElement("button")
-					//btn.innerHTML = '<i class="fas fa-chevron-down"></i>'
-					btn.innerHTML = '<i class="fa-solid fa-chevron-down"></i>'
+					btn.innerHTML = '<i class="fas fa-chevron-down"></i>'
+					//btn.innerHTML = '<i class="fa-solid fa-chevron-down"></i>'
 					p.parentElement.classList.add("text-hidden")
 					btn.addEventListener("click", function(e){
 						toggleText(e, p, i)
@@ -115,10 +115,10 @@
 			const card = e.currentTarget.parentElement
 
 			card.classList.toggle("text-hidden")
-			e.currentTarget.querySelector("i").classList.toggle("fa-solid fa-chevron-down")
-			e.currentTarget.querySelector("i").classList.toggle("fa-solid fa-chevron-up")
+			e.currentTarget.querySelector("i").classList.toggle("fa-chevron-down")
+			e.currentTarget.querySelector("i").classList.toggle("fa-chevron-up")
 			
-			if(card.classList.contains("text-hidden")){
+			if(card.classList.container("text-hidden")){
 				p.textContent = originTexts[i]
 			}else{
 				p.textContent = originTexts[i]
