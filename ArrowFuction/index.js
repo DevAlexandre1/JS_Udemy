@@ -1,32 +1,17 @@
 //Expression function
-function soma(n1,n2){
-    return n1 + n2
-}
 console.log("Funçtion express")
+function soma(n1,n2){
+return n1 + n2
+}
 console.log(soma(10,20))
 console.log("----------------------------")
 
 
 //Arrow Function
 console.log("Arrow Funçtion")
+
 const valor = (n1,n2) => n1 * n2
-
 console.log(valor(2,20))
-console.log("----------------------------")
-
-function Pessoa (nome,idade,sexo) {
-    this.nome=nome, 
-    this.idade=idade,
-    this.sexo=sexo
-}
-const p1 = new Pessoa("Alexandre", 31,"Masc")
-const p2 = new Pessoa("Mariana", 23,"Fem")
-const p3 = new Pessoa("Cecilia", 2,"Fem")
-
-console.log("Arrow Funçtion retornando Objeto json")
-console.log(p1)
-console.log(p2)
-console.log(p3)
 console.log("----------------------------")
 
 //Arrow function usando apenas um parametro
@@ -42,3 +27,21 @@ console.log("----------------------------")
     console.log(pessoa())
 
 })()
+
+//Function construtoras
+function Pessoa (nome,idade,sexo) {
+    this.nome=nome, 
+    this.idade=idade,
+    this.sexo=sexo
+}
+const p1 = new Pessoa("Alexandre", 31,"Masc")
+const p2 = new Pessoa("Mariana", 23,"Fem")
+const p3 = new Pessoa("Cecilia", 2,"Fem")
+
+console.log("Arrow Funçtion retornando Objeto json")
+console.log(p1)
+console.log(p2)
+console.log(p3)
+console.log("----------------------------")
+
+ 
