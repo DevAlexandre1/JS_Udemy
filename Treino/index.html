@@ -7,8 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button>Clicar!</button>
+  
 
-    <script src="testes.js"></script>
+    <script src="Funcoes2.js"></script>
+    <script>
+        const btn = document.querySelector("button")
+
+        // nesse caso o this é o proprio elemento button
+        btn.addEventListener("click", function(){
+            console.log(this)
+        })
+
+        //  No caso de arrow function o this é a elemento window
+        btn.addEventListener("click", () =>{
+            console.log(this)
+        })
+
+
+    </script>
 </body>
 </html>

@@ -36,8 +36,6 @@ C1.equiparCarro(20,50)
 
 console.log(C1)
 
-*/
-
 //Criar um array bidimensional  (Array salvo dentro de outro array)
 
 const garagem = []
@@ -61,4 +59,27 @@ garagem.forEach((p,i)=>{
 })
 //Mostra somente os elementos apartir do 2 da colocação armazenada na posição 4 do array
 // console.log(...garagem[4].slice(2))
+
+
+function sum(n1,n2){
+    return n1 + n2
+}
+
+console.log(sum(10,45))
+
+
+const sum2 = (n1,n2) => n1 + n2
+
+console.log(sum2(2,4))
+
+
+
+const teste = ()=>{
+
+    return this
+}
+
+teste()
+console.log(teste())
+*/
 
