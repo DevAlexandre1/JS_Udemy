@@ -1,13 +1,12 @@
 (() =>{
     function pessoa(){
-        const that = this
-        that.anos =0
+        this.anos =0
     
-        if(that.anos < 10){
-            setInterval(function(){
-                that.anos = that.anos +1
-                console.log('Qual this?', that)
-                console.log('Qual a idade?', that.anos)
+        for(let i = 0;i<15;i++){
+            setInterval(()=>{
+                this.anos = this.anos +1
+                console.log('Qual this?', this)
+                console.log('Qual a idade?', this.anos)
 
             },1000)
         }
