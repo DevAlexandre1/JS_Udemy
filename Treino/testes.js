@@ -82,4 +82,23 @@ const teste = ()=>{
 teste()
 console.log(teste())
 */
+// let person = function Pessoa(){
+//     nome,
+//     idade,
+//     sexo
+// }
+
+// const p1 = new Pessoa("Alexandre", 31,"M")
+// let msgMaiorIdade = (p1.idade >= 18) ? true:false
+
+// console.log(msgMaiorIdade)
+// console.log(typeof msgMaiorIdade)
+
+const arr = [1,2,3,4,5]
+const arr1 = arr.map(el => el *3)
+
+console.log(arr1)
+
+const arr2 = arr1.map(el => (el + " - eu vou vencer") )
+console.log(arr2)
 

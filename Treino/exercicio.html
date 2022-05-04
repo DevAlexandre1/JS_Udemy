@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicicos gerais</title>
     <style>
-        #resultado{
+        div{
             background-color: rgb(72, 200, 200);
             width: 500px;
             height:  500px;
@@ -18,8 +18,7 @@
     <h1>taboada</h1>
 
     <h3>Informe o numero que deseja efetuar a taboada</h3>
-    <input id="inpNumero" type="text">
-    <!-- <input type="number" name="inpNumero" id="inpNumero"> -->
+    <input type="number" name="inpNumero" id="inpNumero">
     <h3>Informe a taboada que deseja executar</h3>
     <input class="btnEntrada" type="button" value="adicao">
     <input class="btnEntrada" type="button" value="subtracao">
@@ -32,22 +31,26 @@
 
     <script>
 
-        let val = document.getElementById("inpNumero")
-        const valEntrada = val.value
-        const btns = document.getElementsByClassName("btnEntrada")
+        let valorEntrada = document.getElementById("inpNumero")
+        let valEntrada = valorEntrada.value
         
+        const btns = document.getElementsByClassName("btnEntrada")        
         const res = document.getElementById("resultado")
+        // const resH = document.createElement("p")
+        // const resP = resH.getElementsByName("p")
         
-
-
         
-
 
         btns[0].addEventListener("click", function somar(valEntrada){            
+            // res.appendChild(resH)
+            res.setAttribute("style", "width: 250px;height:  200px; background-color: white")
+            
             for(let i = 0; i <=10;i++){
                 let somatoria = i + valEntrada
                 // console.log(`${valEntrada} + ${i} =` + somatoria )
-                res.innerHTML = `${valEntrada} + ${i} =` + somatoria
+                // res.innerHTML = `Oi mundo <br>`
+                res.innerHTML =  `${valEntrada.value} + ${i} = ${somatoria.value} <br>` 
+                
             }
 
         })
