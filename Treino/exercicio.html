@@ -5,24 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicicos gerais</title>
+    <style>
+        #resultado{
+            background-color: rgb(72, 200, 200);
+            width: 500px;
+            height:  500px;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>taboada</h1>
 
     <h3>Informe o numero que deseja efetuar a taboada</h3>
-    <input type="numero1">
+    <input id="inpNumero" type="text">
+    <!-- <input type="number" name="inpNumero" id="inpNumero"> -->
     <h3>Informe a taboada que deseja executar</h3>
-    <input type="button" value="adicao">
-    <input type="button" value="subtracao">
-    <input type="button" value="multiplicacao">
-    <input type="button" value="divisao">
+    <input class="btnEntrada" type="button" value="adicao">
+    <input class="btnEntrada" type="button" value="subtracao">
+    <input class="btnEntrada" type="button" value="multiplicacao">
+    <input class="btnEntrada" type="button" value="divisao">
     
-    <div id="resultado"></div>
+    <div >
+        <p id="resultado"> </p>
+    </div>
 
     <script>
 
-        const val = document.getAttribute("numero1")
-        console.log(val)
+        let val = document.getElementById("inpNumero")
+        const valEntrada = val.value
+        const btns = document.getElementsByClassName("btnEntrada")
+        
+        const res = document.getElementById("resultado")
+        
+
+
+        
+
+
+        btns[0].addEventListener("click", function somar(valEntrada){            
+            for(let i = 0; i <=10;i++){
+                let somatoria = i + valEntrada
+                // console.log(`${valEntrada} + ${i} =` + somatoria )
+                res.innerHTML = `${valEntrada} + ${i} =` + somatoria
+            }
+
+        })
+
+        btns[1].addEventListener("click", function sub(valEntrada){            
+            for(let i = 0; i <=10;i++){
+                let subtracao = i - valEntrada
+                // console.log(`${valEntrada} - ${i} =` + subtracao )
+                res.innerHTML = `${valEntrada} - ${i} =` + subtracao
+            }
+        })
+        btns[2].addEventListener("click", function mult(valEntrada){            
+            for(let i = 0; i <=10;i++){
+                let multiplicacao = i * valEntrada
+                // console.log(`${valEntrada} * ${i} =` + somatoria )
+                res.innerHTML = `${valEntrada} * ${i} =` + multiplicacao
+            }
+        })
+        btns[3].addEventListener("click", function div(valEntrada){           
+            for(let i = 0; i <=10;i++){
+                let divisao = i / valEntrada
+                // console.log(`${valEntrada} + ${i} =` + somatoria )
+                res.innerHTML =`${valEntrada} / ${i} =` + divisao 
+            }
+        })
+
 
 
     </script>
