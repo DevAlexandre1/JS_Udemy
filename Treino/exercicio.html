@@ -9,16 +9,41 @@
         div{
             background-color: rgb(72, 200, 200);
             width: 500px;
-            height:  500px;
-            padding: 20px;
+            height:  300px;
+            padding-top: 40px;
+                     
         }
+
+        input{
+            padding: 10px;
+            margin-bottom: 30px;
+            margin-left: 10px;
+        }
+        #resH1 {
+            display: block;
+            margin: auto;
+            text-align: center;            
+            font-size: 3em;
+            padding-top: 20px;
+            color:  white;
+        }
+        #resultado{
+            display: block;
+            margin: auto;
+            text-align: center;
+            border-radius: 15px;
+            font-size: medium;
+            padding-top: 40px;
+        }
+
+        
     </style>
 </head>
 <body>
     <h1>taboada</h1>
 
     <h3>Informe o numero que deseja efetuar a taboada</h3>
-    <input type="number" name="inpNumero" id="inpNumero">
+    <input type="number" name="inpNumero" id="inpNumero" value="0">
     <h3>Informe a taboada que deseja executar</h3>
     <input class="btnEntrada" type="button" value="adicao">
     <input class="btnEntrada" type="button" value="subtracao">
@@ -26,30 +51,30 @@
     <input class="btnEntrada" type="button" value="divisao">
     
     <div >
+        <h1 id="resH1"></h1>
         <p id="resultado"> </p>
     </div>
 
     <script>
 
-        let valorEntrada = document.getElementById("inpNumero")
-        let valEntrada = valorEntrada.value
+        let vInp = document.querySelector("#inpNumero")
+        
         
         const btns = document.getElementsByClassName("btnEntrada")        
+        const resH1 = document.getElementById("resH1")
         const res = document.getElementById("resultado")
-        // const resH = document.createElement("p")
-        // const resP = resH.getElementsByName("p")
         
+        btns[0].addEventListener("click", function somar(){            
+            let vInpValor = vInp.value
+            let vEntFinal = parseFloat(vInpValor)
+            resH1.textContent = "Adição"
         
-
-        btns[0].addEventListener("click", function somar(valEntrada){            
-            // res.appendChild(resH)
             res.setAttribute("style", "width: 250px;height:  200px; background-color: white")
             
             for(let i = 0; i <=10;i++){
-                let somatoria = i + valEntrada
-                // console.log(`${valEntrada} + ${i} =` + somatoria )
-                // res.innerHTML = `Oi mundo <br>`
-                res.innerHTML =  `${valEntrada.value} + ${i} = ${somatoria.value} <br>` 
+                let somatoria = i + vEntFinal
+        
+                res.innerHTML =  (`${vInpValor} + ${i} = ${somatoria} <br>`)
                 
             }
 
