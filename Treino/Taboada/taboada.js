@@ -1,4 +1,4 @@
-let vInp = document.querySelector("#inpNumero")        
+const vInp = document.querySelector("#inpNumero")        
 const ulEntrada =  document.getElementById("painel")
 const btnReset = document.querySelector("#reset")
 const btns = document.getElementsByClassName("btnEntrada")        
@@ -11,8 +11,8 @@ btnReset.addEventListener("click", ()=>{
 
 
 btns[0].addEventListener("click", function somar(){ 
-    let vInpValor = vInp.value
-    let vEntFinal = parseFloat(vInpValor)
+    const vInpValor = vInp.value
+    const vEntFinal = parseFloat(vInpValor)
     resH1.textContent = "Adição"                
     
     if(ulEntrada.childElementCount ==0){
@@ -26,7 +26,7 @@ btns[0].addEventListener("click", function somar(){
         }
     }else{
         
-        let nLis = ulEntrada.querySelectorAll("li")
+        const nLis = ulEntrada.querySelectorAll("li")
         nLis.forEach((li)=> li.remove())
         somar()
     }
@@ -34,8 +34,8 @@ btns[0].addEventListener("click", function somar(){
    
 })
 btns[1].addEventListener("click", function sub(){   
-    let vInpValor = vInp.value
-    let vEntFinal = parseFloat(vInpValor)
+    const vInpValor = vInp.value
+    const vEntFinal = parseFloat(vInpValor)
     resH1.textContent = "Subtração"
 
     if(ulEntrada.childElementCount ==0){
@@ -47,15 +47,15 @@ btns[1].addEventListener("click", function sub(){
             newLi.innerHTML = (` ${vEntFinal} - ${i} = `+ (vEntFinal - i)) 
         }
     }else{
-        let nLis = ulEntrada.querySelectorAll("li")
+        const nLis = ulEntrada.querySelectorAll("li")
         nLis.forEach((li)=> li.remove())
         sub()
 
     }
 })
 btns[2].addEventListener("click", function mult(){  
-    let vInpValor = vInp.value
-    let vEntFinal = parseFloat(vInpValor)
+    const vInpValor = vInp.value
+    const vEntFinal = parseFloat(vInpValor)
     resH1.textContent = "Multiplicação"
 
     if(ulEntrada.childElementCount ==0){
@@ -68,14 +68,14 @@ btns[2].addEventListener("click", function mult(){
         
         }
     }else{
-        let nLis = ulEntrada.querySelectorAll("li")
+        const nLis = ulEntrada.querySelectorAll("li")
         nLis.forEach((li)=> li.remove())
         mult()
     }
 })
 btns[3].addEventListener("click", function div(){   
-    let vInpValor = vInp.value
-    let vEntFinal =  parseInt(vInpValor)
+    const vInpValor = vInp.value
+    const vEntFinal =  parseInt(vInpValor)
     const vInpValorTamanho = vInpValor.length
     resH1.textContent = "Divisão"
 
@@ -89,7 +89,7 @@ btns[3].addEventListener("click", function div(){
         
         }
     }else{
-        let nLis = ulEntrada.querySelectorAll("li")
+        const nLis = ulEntrada.querySelectorAll("li")
         nLis.forEach((li)=>  li.remove())                
         div()
     }
