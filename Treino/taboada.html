@@ -105,8 +105,9 @@
                
                 }
             }else{
-                // let nLis = document.querySelectorAll("li")
-                removeAllChildNodes(ulEntrada)
+                
+                let nLis = ulEntrada.querySelectorAll("li")
+                nLis.forEach((li)=> li.remove())
                 somar()
             }
            
@@ -126,7 +127,8 @@
                     newLi.innerHTML = (` ${vEntFinal} - ${i} = `+ (vEntFinal - i)) 
                 }
             }else{
-                removeAllChildNodes(ulEntrada)
+                let nLis = ulEntrada.querySelectorAll("li")
+                nLis.forEach((li)=> li.remove())
                 sub()
 
             }
@@ -146,25 +148,29 @@
                 
                 }
             }else{
-                removeAllChildNodes(ulEntrada)
+                let nLis = ulEntrada.querySelectorAll("li")
+                nLis.forEach((li)=> li.remove())
                 mult()
             }
         })
         btns[3].addEventListener("click", function div(){   
             let vInpValor = vInp.value
             let vEntFinal =  parseInt(vInpValor)
+            const vInpValorTamanho = vInpValor.length
             resH1.textContent = "Divisão"
+
             if(ulEntrada.childElementCount ==0){
                 for(let i = 0; i <=10;i++){               
                     const newLi = document.createElement("li")   
                     newLi.setAttribute("style", "padding: 3px;width: 200px; list-style:none; color: white; font-size: 18px; margin: auto" )         
                     ulEntrada.appendChild(newLi)
 
-                    newLi.innerHTML = (` ${vEntFinal} / ${i} = `+ (vEntFinal / i).toPrecision(1))
+                    newLi.innerHTML = (` ${vEntFinal} / ${i} = `+ (vEntFinal / i).toPrecision(vInpValorTamanho))
                 
                 }
             }else{
-                removeAllChildNodes(ulEntrada)
+                let nLis = ulEntrada.querySelectorAll("li")
+                nLis.forEach((li)=>  li.remove())                
                 div()
             }
         })
