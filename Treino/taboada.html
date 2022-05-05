@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicicos gerais</title>
+    <style>
+        body{
+            padding: 30px;
+            padding-left: 100px;
+            display: block;
+            margin: auto;
+            text-align: center; 
+
+        }
+        #divPainel{
+            background-color: rgb(52, 55, 150);
+            width: 500px;
+            height:  400px;
+            padding-top: 10px;
+            border-radius: 15px;
+            display: block;
+            margin: auto;
+            text-align: center; 
+                     
+        }
+
+        input{
+            padding: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            width: 100px;
+        }
+        #resH1 {
+            display: block;
+            margin: auto;
+            text-align: center;            
+            font-size: 3em;
+            padding-top: 10px;
+            color:  white;
+        }
+        #painel{
+            display: block;
+            margin: auto;
+            text-align: center;
+            border-radius: 15px;
+            font-size: medium;
+            padding-top: 10px;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; padding-top: 50px; padding-bottom: 50px;">TABOADA</h1>
+
+    <div>
+        <h3>Informe o numero que deseja efetuar a taboada</h3>
+        <input type="number" name="inpNumero" id="inpNumero" value="">
+        <input id="reset" style="background-color: rgb(255, 151, 151); font-size: 15px;" type="button" value="Resetar">
+    </div>
+
+    <h3>Informe a taboada que deseja executar</h3>
+    <input class="btnEntrada" type="button" value="adicao">
+    <input class="btnEntrada" type="button" value="subtracao">
+    <input class="btnEntrada" type="button" value="multiplicacao">
+    <input class="btnEntrada" type="button" value="divisao">
+    
+    <div id="divPainel">
+        <h1 id="resH1"></h1>
+        <ul id="painel"></ul>
+       
+    </div>
+
+    <script>
+
+        let vInp = document.querySelector("#inpNumero")
+
+        
+        const ulEntrada =  document.getElementById("painel")
+        const btnReset = document.querySelector("#reset")
+        const btns = document.getElementsByClassName("btnEntrada")        
+        const resH1 = document.getElementById("resH1")
+        const res = document.getElementById("resultado")
+        
+        btnReset.addEventListener("click", ()=>{
+            location.reload()
+        })
+
+
+        btns[0].addEventListener("click", function somar(){ 
+            let vInpValor = vInp.value
+            let vEntFinal = parseFloat(vInpValor)
+            resH1.textContent = "Adição"                
+            
+            if(ulEntrada.childElementCount ==0){
+                for(let i = 0; i <=10;i++){
+                const newLi = document.createElement("li")   
+                newLi.setAttribute("style", "padding: 3px; width: 200px; list-style:none; color: white; font-size: 18px; margin: auto" )         
+                ulEntrada.appendChild(newLi)
+
+                newLi.innerHTML = (` ${vEntFinal} + ${i} = `+ (vEntFinal + i))              
+               
+                }
+            }else{
+                // let nLis = document.querySelectorAll("li")
+                removeAllChildNodes(ulEntrada)
+                somar()
+            }
+           
+           
+        })
+        btns[1].addEventListener("click", function sub(){   
+            let vInpValor = vInp.value
+            let vEntFinal = parseFloat(vInpValor)
+            resH1.textContent = "Subtração"
+
+            if(ulEntrada.childElementCount ==0){
+                for(let i = 0; i <=10;i++){
+                    const newLi = document.createElement("li")   
+                    newLi.setAttribute("style", "padding: 3px;width: 200px; list-style:none; color: white; font-size: 18px; margin: auto" )         
+                    ulEntrada.appendChild(newLi)
+
+                    newLi.innerHTML = (` ${vEntFinal} - ${i} = `+ (vEntFinal - i)) 
+                }
+            }else{
+                removeAllChildNodes(ulEntrada)
+                sub()
+
+            }
+        })
+        btns[2].addEventListener("click", function mult(){  
+            let vInpValor = vInp.value
+            let vEntFinal = parseFloat(vInpValor)
+            resH1.textContent = "Multiplicação"
+
+            if(ulEntrada.childElementCount ==0){
+                for(let i = 0; i <=10;i++){
+                    const newLi = document.createElement("li")   
+                    newLi.setAttribute("style", "padding: 3px;width: 200px;list-style:none; color: white; font-size: 18px; margin: auto" )         
+                    ulEntrada.appendChild(newLi)
+
+                    newLi.innerHTML = (` ${vEntFinal} x ${i} = `+ (vEntFinal * i))
+                
+                }
+            }else{
+                removeAllChildNodes(ulEntrada)
+                mult()
+            }
+        })
+        btns[3].addEventListener("click", function div(){   
+            let vInpValor = vInp.value
+            let vEntFinal =  parseInt(vInpValor)
+            resH1.textContent = "Divisão"
+            if(ulEntrada.childElementCount ==0){
+                for(let i = 0; i <=10;i++){               
+                    const newLi = document.createElement("li")   
+                    newLi.setAttribute("style", "padding: 3px;width: 200px; list-style:none; color: white; font-size: 18px; margin: auto" )         
+                    ulEntrada.appendChild(newLi)
+
+                    newLi.innerHTML = (` ${vEntFinal} / ${i} = `+ (vEntFinal / i).toPrecision(1))
+                
+                }
+            }else{
+                removeAllChildNodes(ulEntrada)
+                div()
+            }
+        })
+
+        
+
+    </script>
+</body>
+</html>
