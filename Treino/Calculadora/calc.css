@@ -1,0 +1,74 @@
+#container{
+    display: block;
+    margin: auto;
+    width: 325px;
+    height: 500px;
+    background-color: rgb(108, 182, 192);
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-top: 50px;
+    
+
+}
+#painel{
+    display: block;
+    margin: auto;
+    width: 310px;
+    height: 70px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#btnsIn{
+    /* display: block; */
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    background-color: black;
+    width: 310px;
+    height: 350px;
+    border-radius: 20px;
+    
+}
+
+#numIn{
+    /* display: block;
+    margin: auto; */
+    margin: 5px;
+   
+    background-color: rgb(255, 204, 0);
+    width: 230px;
+    height: 250px;
+    border-radius: 5px;
+
+}
+#operadoresIn{
+    /* display: block;
+    margin: auto; */
+    margin: 5px;
+    background-color: rgb(255, 204, 0);
+    width: 62px;
+    height: 250px;
+    border-radius: 5px;
+
+}
+
+/* botões */
+.btnEntrada{
+    /* display: block; */
+   
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+
+}
+
+.btnOperadorEntrada{
+    margin: auto;
+     display: block;
+     width: 50px;
+     height: 50px;
+     border-radius: 10px;
+     margin-top: 10px;
+}
