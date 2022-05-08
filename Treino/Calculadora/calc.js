@@ -4,50 +4,70 @@ const btnNum = document.querySelectorAll(".btnEntrada")
 
 const btnOperadores = document.querySelectorAll(".btnOperadorEntrada")
 
-let valorPainel = 0
+let valorPainel = []
+let valorShow = "" 
 
+// Botoes de entrada
 btnNum[0].addEventListener("click", function addValores(){
-    painel = valorPainel
-
-    valorPainel.textContent = push(btnNum[0].value)
+    valorPainel.push(btnNum[0].value)
+    valorShow = valorPainel.join("")
+    painel.textContent = valorShow
 })
 btnNum[1].addEventListener("click", function addValores(){
-
-    painel.textContent = btnNum[1].value
+    valorPainel.push(btnNum[1].value)
+    valorShow = valorPainel.join("")
+    painel.textContent = valorShow
 })
 btnNum[2].addEventListener("click", function addValores(){
-
-    painel.textContent = btnNum[2].value
+    valorPainel.push(btnNum[2].value)
+    valorShow = valorPainel.join("")
+    painel.textContent = valorShow
 })
 btnNum[3].addEventListener("click", function addValores(){
-
-    painel.textContent = btnNum[3].value
+    valorPainel.push(btnNum[3].value)
+    valorShow = valorPainel.join("")
+    painel.textContent = valorShow
 })
 btnNum[4].addEventListener("click", function addValores(){
-
-    painel.textContent = btnNum[4].value
+    valorPainel.push(btnNum[4].value)
+    valorShow = valorPainel.join("")
+    painel.textContent = valorShow
 })
 btnNum[5].addEventListener("click", function addValores(){
-
-    painel.textContent = btnNum[5].value
+    valorPainel.push(btnNum[5].value)
+    valorShow = valorPainel.join("")
+    painel.textContent = valorShow
 })
 btnNum[6].addEventListener("click", function addValores(){
-
-    painel.textContent = btnNum[6].value
+    valorPainel.push(btnNum[6].value)
+    valorShow = valorPainel.join("")
+    painel.textContent = valorShow
 })
 btnNum[7].addEventListener("click", function addValores(){
-
-    painel.textContent = btnNum[7].value
+    valorPainel.push(btnNum[7].value)
+    valorShow = valorPainel.join("")
+    painel.textContent = valorShow
 })
 btnNum[8].addEventListener("click", function addValores(){
-
-    painel.textContent = btnNum[8].value
+    valorPainel.push(btnNum[8].value)
+    valorShow = valorPainel.join("")
+    painel.textContent = valorShow
 })
 btnNum[9].addEventListener("click", function addValores(){
-
-    painel.textContent = btnNum[9].value
+    valorShow = ""
+    valorPainel = []
+    painel.textContent = valorShow
 })
 btnNum[10].addEventListener("click", function addValores(){
-
-    painel.textContent = btnNum[10].value
+    valorPainel.push(btnNum[10].value)
+    valorShow = valorPainel.join("")
+    painel.textContent = valorShow
 })
+//botao =
+btnNum[11].addEventListener("click", function addValores(){
+    valorPainel.push(btnNum[11].value)
+    valorShow = valorPainel.join("")
+    painel.textContent = valorShow
+})
+
+//botões operadores
