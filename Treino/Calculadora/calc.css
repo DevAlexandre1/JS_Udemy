@@ -2,14 +2,19 @@
     display: block;
     margin: auto;
     width: 325px;
-    height: 500px;
+    height: 470px;
     background-color: rgb(108, 182, 192);
     border: 1px solid black;
     border-radius: 20px;
-    padding-top: 50px;
+    /* padding-top: 30px; */
     
 
 }
+#h1Calc{    
+    text-align: center;
+    
+}
+
 #painel{
     display: block;
     margin: auto;
@@ -24,9 +29,9 @@
     display: flex;
     margin: auto;
     margin-top: 30px;
-    background-color: black;
+    background-color:  rgb(108, 182, 192);
     width: 310px;
-    height: 350px;
+    height: 270px;
     border-radius: 20px;
     
 }
@@ -34,19 +39,18 @@
 #numIn{
     /* display: block;
     margin: auto; */
-    margin: 5px;
-   
-    background-color: rgb(255, 204, 0);
+
+    padding-left: 10px; 
+    background-color: rgba(67, 64, 140, 0.572);
     width: 230px;
     height: 250px;
     border-radius: 5px;
 
 }
 #operadoresIn{
-    /* display: block;
-    margin: auto; */
-    margin: 5px;
-    background-color: rgb(255, 204, 0);
+   
+    background-color: rgba(67, 64, 140, 0.572);
+    margin-left: 4px;
     width: 62px;
     height: 250px;
     border-radius: 5px;
@@ -56,19 +60,22 @@
 /* botões */
 .btnEntrada{
     /* display: block; */
-   
+    font-size: 25px;
     width: 70px;
-    height: 30px;
+    height: 50px;
     border-radius: 5px;
     margin-top: 10px;
+    border: 2px solid black;
 
 }
 
 .btnOperadorEntrada{
     margin: auto;
      display: block;
+     font-size: 40px;
      width: 50px;
      height: 50px;
      border-radius: 10px;
      margin-top: 10px;
+     border: 2px solid black;
 }
