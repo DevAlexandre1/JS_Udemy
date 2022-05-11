@@ -1,5 +1,32 @@
+
+class Cliente {
+    constructor(nome,documento, tipo){
+        if(this.constructor === Cliente){
+            throw new Error("Classe abstract")
+        }
+        this.nome = nome
+        this.documento = documento
+        this.tipo = tipo
+    }
+}
+
+class ClientePF extends Cliente{
+    constructor(nome,documento){
+        super(nome,documento,"CPF")
+        this.CPF = documento
+        
+    }
+}
+class ClientePJ extends Cliente{
+    constructor(nome,documento){
+        super(nome,documento,"CNPJ")
+        this.CNPJ = documento 
+        
+    }
+}
+
 class ContaBancaria{
-    constructor(cliente,numero,saldo){
+    constructor(cliente,numero){
         if(this.constructor === ContaBancaria){
             throw new error ("ContaBancaria is a abstract class")
         }if(cliente, numero){
@@ -9,8 +36,8 @@ class ContaBancaria{
         }      
     }
     get obterDadosCliente(){
-        console.log(this.cliente.constructor)
-        return `Nome do cliente ${this.cliente.nome} e seu documento é ${this.cliente.documento}`
+
+        return `Cliente: ${this.cliente.nome} e ${this.cliente.tipo}: ${this.cliente.documento}`
     }
     depositar(valor){
         this.saldo += valor    
@@ -48,46 +75,13 @@ class ContaPoupanca extends ContaBancaria{
     }
 }
 
-class Cliente {
-    constructor(nome,documento){
-        if(this.constructor === Cliente){
-            throw new Error("Classe abstract")
-        }
-        this.nome = nome
-        this.documento = documento
-    }
-}
+const alexandre = new ClientePF("Alexandre", "345.903.567.10")
+const alexandreDev = new ClientePJ("DevAlexandre","15667456000109")
 
-class ClientePF extends Cliente{
-    constructor(nome,documento){
-        super(nome,documento)
-        this.CPF = documento
-        
-    }
-}
-class ClientePJ extends Cliente{
-    constructor(nome,documento){
-        super(nome,documento)
-        this.CNPJ = documento 
-        
-    }
-}
-
-const cc1 = new ContaCorrente("Alexandre",1)
-cc1.limite = 3000
-cc1.depositar(1000)
-cc1.sacar(3500)
+const cc1 = new ContaCorrente(alexandreDev,1)
+const cp1 = new ContaPoupanca(alexandre,2)
 console.log(cc1)
-
-const cp1 = new ContaPoupanca("Mariana", 2)
-cp1.depositar(4000)
-cp1.sacar(2000)
 console.log(cp1)
 
-const client1 = new ClientePF("Carlos","109.343.234.22")
-const client2 = new ClientePJ("Carlos","10.098.876.0001-10")
-
-console.log(client1)
-console.log(client2)
-
-console.log(client1.obterDadosCliente)
+console.log(cc1.obterDadosCliente)
+console.log(cp1.obterDadosCliente)
