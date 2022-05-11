@@ -1,3 +1,17 @@
+class Transferencia{
+    static execute(contaOrigem,contaDestino,valor){
+        if(!contaOrigem instanceof ContaBancaria || !contaDestino instanceof ContaBancaria){
+            throw new Error("Contas precisam herdar de ContaBancaria")
+        }
+        try{
+            contaOrigem.sacar(valor)
+            contaDestino.depositar(valor)
+        }catch(e){
+            console.log("Sem saldo.", e.message)
+        }
+    }
+}
+
 
 class Cliente {
     constructor(nome,documento, tipo){
@@ -85,3 +99,5 @@ console.log(cp1)
 
 console.log(cc1.obterDadosCliente)
 console.log(cp1.obterDadosCliente)
+
+
